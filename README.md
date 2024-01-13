@@ -1,15 +1,16 @@
-  #include <iostream>
-  using namespace std;
-  const int MAX_BOOKS = 10;
+      #include <iostream>
+        using namespace std;
+              const int MAX_BOOKS = 10;
 
-  // Structure representing a book chair
-  struct BookChair {
+      // Structure representing a book chair
+      struct BookChair {
     string bookTitle;
     bool isAvailable;
 };
 
-// Function to display the status of book chairs
-void displayBookChairs(BookChair* library, int size) {
+
+      // Function to display the status of book chairs
+    void displayBookChairs(BookChair* library, int size) {
     cout << "Library Status:\n";
     for (int i = 0; i < size; ++i) {
         cout << "Chair " << i + 1 << ": ";
@@ -22,8 +23,8 @@ void displayBookChairs(BookChair* library, int size) {
     cout << endl;
 }
 
-// Function to check out a book chair
-void checkOutBookChair(BookChair* library, int chairNumber, const string& bookTitle) {
+    // Function to check out a book chair
+    void checkOutBookChair(BookChair* library, int chairNumber, const string& bookTitle) {
     if (chairNumber >= 1 && chairNumber <= MAX_BOOKS) {
         if (library[chairNumber - 1].isAvailable) {
             library[chairNumber - 1].isAvailable = false;
@@ -38,8 +39,8 @@ void checkOutBookChair(BookChair* library, int chairNumber, const string& bookTi
 }
 
 
-// Function to return a book chair
-void returnBookChair(BookChair* library, int chairNumber) {
+      // Function to return a book chair
+    void returnBookChair(BookChair* library, int chairNumber) {
     if (chairNumber >= 1 && chairNumber <= MAX_BOOKS) {
         if (!library[chairNumber - 1].isAvailable) {
             library[chairNumber - 1].isAvailable = true;
@@ -51,9 +52,9 @@ void returnBookChair(BookChair* library, int chairNumber) {
     } else {
         cout << "Invalid chair number.\n";
     }
-}
+    }
 
-int main() {
+    int main() {
     using namespace std; // Using namespace std
 
     // Create an array of book chairs
